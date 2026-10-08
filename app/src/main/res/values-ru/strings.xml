@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="tab_now">Сейчас</string>
+    <string name="tab_worry">Тревога</string>
+    <string name="tab_before">Успеть</string>
+
+    <string name="onb_title">Мы всё равно все умрём.</string>
+    <string name="onb_sub">Так что давай посчитаем, сколько осталось. Не лет. Суббот.</string>
+    <string name="onb_birth">Твой день рождения</string>
+    <string name="onb_pick">Выбрать дату</string>
+    <plurals name="onb_expectancy">
+        <item quantity="one">Уровень оптимизма: %d год</item>
+        <item quantity="few">Уровень оптимизма: %d года</item>
+        <item quantity="many">Уровень оптимизма: %d лет</item>
+        <item quantity="other">Уровень оптимизма: %d года</item>
+    </plurals>
+    <string name="onb_nudges">Каждый день напоминать, что ты жив</string>
+    <string name="onb_go">Принять это</string>
+    <string name="onb_save">Сохранить</string>
+
+    <string name="now_prefix">У тебя осталось примерно</string>
+    <!-- The count is shown separately, above the word. -->
+    <plurals name="now_suffix" tools:ignore="ImpliedQuantity">
+        <item quantity="one">суббота.</item>
+        <item quantity="few">субботы.</item>
+        <item quantity="many">суббот.</item>
+        <item quantity="other">субботы.</item>
+    </plurals>
+    <string name="now_bonus">Ты на бонусном времени. Каждый день — подарок без чека.</string>
+    <string name="now_lived">Пройдено %1$d%% пути</string>
+    <string name="now_question_label">Вопрос дня</string>
+    <string name="now_settings">настройки</string>
+    <string name="anyway_button">ВСЁ РАВНО</string>
+    <string name="anyway_hint">Страшно решиться? Жми.</string>
+
+    <string name="worry_title">Переживатор</string>
+    <string name="worry_sub">Положи сюда то, что тебя грызёт.</string>
+    <string name="worry_hint">Начальник не ответил на письмо…</string>
+    <string name="worry_go">Профильтровать</string>
+    <string name="worry_q1">Будет ли это важно через 5 лет?</string>
+    <string name="worry_q2">Будет ли это важно через 100 лет?</string>
+    <string name="worry_q3">Будет ли это важно, когда Солнце станет красным гигантом?</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="worry_release">Всё. Солнце об этом тоже не вспомнит.</string>
+    <string name="worry_real">Окей, это реально. Разберись — и отпусти.</string>
+    <string name="worry_legacy">Уровень наследия. Тогда это заслуживает твоих суббот, а не твоих трёх ночи.</string>
+    <string name="worry_cosmic">Смелое заявление. Солнце не согласно. Отпусти.</string>
+    <string name="worry_to_list">Добавить в «Пока не поздно»</string>
+    <string name="worry_added">В списке.</string>
+    <string name="worry_again">Ещё одна</string>
+
+    <string name="before_title">Пока не поздно</string>
+    <string name="before_sub">Не список желаний. То, о чём пожалеешь, если не сделаешь.</string>
+    <string name="before_hint">Позвонить маме</string>
+    <string name="before_add">Добавить</string>
+    <string name="before_empty">Позвони маме. Скажи это вслух. Съешь то самое мороженое.</string>
+    <string name="before_today">Добавлено сегодня. Оправданий пока нет.</string>
+    <string name="before_done">Сделано. Одним сожалением меньше.</string>
+    <string name="before_remove">Удалить</string>
+    <plurals name="before_waiting">
+        <item quantity="one">Ждёт %d день. А ведь мог бы уже.</item>
+        <item quantity="few">Ждёт %d дня. А ведь мог бы уже.</item>
+        <item quantity="many">Ждёт %d дней. А ведь мог бы уже.</item>
+        <item quantity="other">Ждёт %d дня. А ведь мог бы уже.</item>
+    </plurals>
+
+    <string name="nudge_title">Ты всё ещё жив.</string>
+    <string name="nudge_channel">Ежедневные напоминания</string>
+
+    <string-array name="questions">
+        <item>Делал бы ты это, если бы осталось 100 суббот?</item>
+        <item>Кому бы ты позвонил, если бы сегодня была последняя суббота?</item>
+        <item>Что ты откладываешь, потому что думаешь, что время есть?</item>
+        <item>Ради чьего мнения ты живёшь?</item>
+        <item>Что бы ты перестал делать, если бы никто не смотрел?</item>
+        <item>Что ты любил делать в 10 лет и бросил?</item>
+        <item>Это «чёрт, да!» — или всё-таки «нет»?</item>
+    </string-array>
+
+    <string-array name="quotes">
+        <item>«Ты можешь уйти из жизни прямо сейчас. Пусть это определяет то, что ты делаешь, говоришь и думаешь». — Марк Аврелий</item>
+        <item>«Мы не получили короткую жизнь, мы сделали её такой». — Сенека</item>
+        <item>«Ничего не будем откладывать. Будем каждый день сводить счёты с жизнью». — Сенека</item>
+        <item>«Смерть не имеет к нам никакого отношения». — Эпикур</item>
+        <item>«Memento mori. Помни, что умрёшь». — стоическое изречение</item>
+        <item>«Всё, что может рука твоя делать, по силам делай». — Екклесиаст</item>
+        <item>«Dum spiro, spero. Пока дышу — надеюсь». — латинская пословица</item>
+    </string-array>
+
+    <string-array name="nudges">
+        <item>Мы всё равно все умрём. Напиши первым.</item>
+        <item>Худший сценарий: ты умрёшь. Что и так произойдёт.</item>
+        <item>Через 100 лет никто не вспомнит этот неловкий момент. Вперёд.</item>
+        <item>Вселенной 13,8 миллиарда лет. Твой стыд длится 4 секунды.</item>
+        <item>Эту субботу не вернуть. Проживи её громко.</item>
+        <item>Сожаление весит больше, чем отказ.</item>
+        <item>Делай со страхом. Всем остальным тоже страшно.</item>
+        <item>Удача любит смертных.</item>
+    </string-array>
+</resources>

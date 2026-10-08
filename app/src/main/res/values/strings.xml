@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" translatable="false">Anyway</string>
+    <string name="wordmark" translatable="false">ANYWAY</string>
+
+    <string name="tab_now">Now</string>
+    <string name="tab_worry">Worry</string>
+    <string name="tab_before">Before</string>
+
+    <string name="onb_title">We\'re all gonna die anyway.</string>
+    <string name="onb_sub">So let\'s count what\'s left. Not years. Saturdays.</string>
+    <string name="onb_birth">Your birthday</string>
+    <string name="onb_pick">Pick a date</string>
+    <plurals name="onb_expectancy">
+        <item quantity="one">Optimism level: %d year</item>
+        <item quantity="other">Optimism level: %d years</item>
+    </plurals>
+    <string name="onb_nudges">A daily reminder that you\'re alive</string>
+    <string name="onb_go">Face it</string>
+    <string name="onb_save">Save</string>
+
+    <string name="now_prefix">You have about</string>
+    <plurals name="now_suffix">
+        <item quantity="one">Saturday left.</item>
+        <item quantity="other">Saturdays left.</item>
+    </plurals>
+    <string name="now_bonus">You\'re on bonus time. Every day is a gift with no receipt.</string>
+    <string name="now_lived">%1$d%% of the way there</string>
+    <string name="now_question_label">Question of the day</string>
+    <string name="now_settings">settings</string>
+    <string name="anyway_button">ANYWAY</string>
+    <string name="anyway_hint">Scared to do it? Press.</string>
+
+    <string name="worry_title">The Worry Filter</string>
+    <string name="worry_sub">Put the thing that\'s eating you in here.</string>
+    <string name="worry_hint">My boss didn\'t reply to my email…</string>
+    <string name="worry_go">Filter it</string>
+    <string name="worry_q1">Will this matter in 5 years?</string>
+    <string name="worry_q2">Will this matter in 100 years?</string>
+    <string name="worry_q3">Will this matter when the Sun becomes a red giant?</string>
+    <string name="worry_step" translatable="false">%1$d / 3</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="worry_release">Gone. The Sun won\'t remember it either.</string>
+    <string name="worry_real">Okay, this one\'s real. Handle it — then let it go.</string>
+    <string name="worry_legacy">Legacy-level. Then it deserves your Saturdays, not your 3 a.m.</string>
+    <string name="worry_cosmic">Bold claim. The Sun disagrees. Let it go.</string>
+    <string name="worry_to_list">Put it on the Before list</string>
+    <string name="worry_added">On the list.</string>
+    <string name="worry_again">Another one</string>
+
+    <string name="before_title">Before it\'s too late</string>
+    <string name="before_sub">Not a bucket list. Things you\'ll regret not doing.</string>
+    <string name="before_hint">Call mom</string>
+    <string name="before_add">Add</string>
+    <string name="before_empty">Call your mom. Say it out loud. Eat the ice cream.</string>
+    <string name="before_today">Added today. No excuses yet.</string>
+    <string name="before_done">Done. One less regret.</string>
+    <string name="before_remove">Remove</string>
+    <plurals name="before_waiting">
+        <item quantity="one">Waiting %d day. Could\'ve done it already.</item>
+        <item quantity="other">Waiting %d days. Could\'ve done it already.</item>
+    </plurals>
+
+    <string name="nudge_title">You\'re still alive.</string>
+    <string name="nudge_channel">Daily reminders</string>
+
+    <string-array name="questions">
+        <item>Would you still do this if you had 100 Saturdays left?</item>
+        <item>Who would you call if today were your last Saturday?</item>
+        <item>What are you putting off because you think you have time?</item>
+        <item>Whose opinion are you living for?</item>
+        <item>What would you stop doing if nobody was watching?</item>
+        <item>What did you love doing at 10 that you quit?</item>
+        <item>Is this a hell yes — or a no?</item>
+    </string-array>
+
+    <string-array name="quotes" tools:ignore="Typos">
+        <item>“You could leave life right now. Let that determine what you do and say and think.” — Marcus Aurelius</item>
+        <item>“It is not that we have a short time to live, but that we waste a lot of it.” — Seneca</item>
+        <item>“Let us postpone nothing. Let us balance life’s books each day.” — Seneca</item>
+        <item>“Death is nothing to us.” — Epicurus</item>
+        <item>“Memento mori. Remember that you will die.” — Stoic proverb</item>
+        <item>“Whatever your hand finds to do, do it with all your might.” — Ecclesiastes</item>
+        <item>“Dum spiro, spero. While I breathe, I hope.” — Latin proverb</item>
+    </string-array>
+
+    <string-array name="nudges">
+        <item>We\'re all gonna die anyway. Text them first.</item>
+        <item>Worst case: you die. Which is happening regardless.</item>
+        <item>Nobody will remember this awkward moment in 100 years. Go.</item>
+        <item>The universe is 13.8 billion years old. Your embarrassment lasts 4 seconds.</item>
+        <item>You won\'t get this Saturday back. Spend it loud.</item>
+        <item>Regret weighs more than rejection.</item>
+        <item>Do it scared. Everyone else is too.</item>
+        <item>Fortune favors the mortal.</item>
+    </string-array>
+</resources>
