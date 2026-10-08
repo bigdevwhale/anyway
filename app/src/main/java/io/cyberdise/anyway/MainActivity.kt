@@ -1,5 +1,6 @@
 package io.cyberdise.anyway
 
+import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,6 +11,10 @@ import io.cyberdise.anyway.ui.AnywayApp
 import io.cyberdise.anyway.ui.AnywayTheme
 
 class MainActivity : ComponentActivity() {
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(Locales.wrap(newBase))
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge(

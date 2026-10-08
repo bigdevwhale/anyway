@@ -74,7 +74,7 @@ Anyway has **no internet permission**. Your birthday, your worries and your list
 
 ## Languages
 
-English and Russian. The app follows the system language; on Android 13+ you can also pick it per-app in *Settings → Apps → Anyway → Language*.
+English and Russian. Pick one on the first screen or later in *settings* — or leave it on *System*. On Android 13+ the choice is shared with *Settings → Apps → Anyway → Language*.
 
 ## Build
 

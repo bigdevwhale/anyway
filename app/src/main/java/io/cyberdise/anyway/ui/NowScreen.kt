@@ -40,6 +40,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.pluralStringResource
@@ -100,7 +101,7 @@ fun NowScreen(state: AppState, onSettings: () -> Unit) {
         if (left > 0) {
             Text(stringResource(R.string.now_prefix), color = Ash, fontSize = 18.sp)
             Text(
-                NumberFormat.getIntegerInstance().format(counter.value.roundToLong()),
+                NumberFormat.getIntegerInstance(LocalConfiguration.current.locales[0]).format(counter.value.roundToLong()),
                 color = Ember,
                 fontSize = 92.sp,
                 lineHeight = 96.sp,

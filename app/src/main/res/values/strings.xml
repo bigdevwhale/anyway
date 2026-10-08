@@ -16,6 +16,7 @@
         <item quantity="other">Optimism level: %d years</item>
     </plurals>
     <string name="onb_nudges">A daily reminder that you\'re alive</string>
+    <string name="lang_system">System</string>
     <string name="onb_go">Face it</string>
     <string name="onb_save">Save</string>
 

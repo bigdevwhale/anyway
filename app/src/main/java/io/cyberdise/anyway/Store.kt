@@ -28,6 +28,11 @@ class Store(context: Context) {
         get() = prefs.getBoolean(KEY_NUDGES, true)
         set(value) = prefs.edit().putBoolean(KEY_NUDGES, value).apply()
 
+    /** Language tag chosen in the app, "" for system. Only used below Android 13. */
+    var language: String
+        get() = prefs.getString(KEY_LANGUAGE, "") ?: ""
+        set(value) = prefs.edit().putString(KEY_LANGUAGE, value).apply()
+
     var lastNudge: LocalDate?
         get() = prefs.getString(KEY_LAST_NUDGE, null)?.let(LocalDate::parse)
         set(value) = prefs.edit().putString(KEY_LAST_NUDGE, value?.toString()).apply()
@@ -70,6 +75,7 @@ class Store(context: Context) {
         const val KEY_LAST_NUDGE = "last_nudge"
         const val KEY_NEXT_NUDGE = "next_nudge"
         const val KEY_REGRETS = "regrets"
+        const val KEY_LANGUAGE = "language"
     }
 }
 

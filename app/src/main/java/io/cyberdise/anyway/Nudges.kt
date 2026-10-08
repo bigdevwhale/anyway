@@ -53,7 +53,8 @@ object Nudges {
         return day.atTime(time).atZone(now.zone).toInstant().toEpochMilli()
     }
 
-    fun show(context: Context) {
+    fun show(appContext: Context) {
+        val context = Locales.wrap(appContext)
         val store = Store(context)
         store.lastNudge = LocalDate.now()
         store.nextNudgeAt = 0

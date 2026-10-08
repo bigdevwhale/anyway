@@ -4,9 +4,12 @@ import android.Manifest
 import android.content.pm.PackageManager
 import android.os.Build
 import androidx.activity.compose.BackHandler
+import androidx.activity.compose.LocalActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -36,9 +39,13 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
@@ -46,6 +53,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import io.cyberdise.anyway.AppState
+import io.cyberdise.anyway.Locales
 import io.cyberdise.anyway.Nudges
 import io.cyberdise.anyway.R
 import java.time.Instant
@@ -59,9 +67,10 @@ import kotlin.math.roundToInt
 @Composable
 fun SetupScreen(state: AppState, isFirstRun: Boolean, onDone: () -> Unit) {
     val context = LocalContext.current
-    var birth by remember { mutableStateOf(state.birthDate) }
-    var years by remember { mutableFloatStateOf(state.expectancy.toFloat()) }
-    var nudges by remember { mutableStateOf(state.nudgesEnabled) }
+    // Saveable: switching language recreates the activity mid-setup.
+    var birth by rememberSaveable { mutableStateOf(state.birthDate) }
+    var years by rememberSaveable { mutableFloatStateOf(state.expectancy.toFloat()) }
+    var nudges by rememberSaveable { mutableStateOf(state.nudgesEnabled) }
     var picking by remember { mutableStateOf(false) }
 
     BackHandler(enabled = !isFirstRun, onBack = onDone)
@@ -82,6 +91,8 @@ fun SetupScreen(state: AppState, isFirstRun: Boolean, onDone: () -> Unit) {
             .verticalScroll(rememberScrollState())
             .padding(24.dp)
     ) {
+        Spacer(Modifier.height(8.dp))
+        LanguagePicker()
         Spacer(Modifier.height(40.dp))
         Text(
             stringResource(R.string.onb_title),
@@ -102,7 +113,7 @@ fun SetupScreen(state: AppState, isFirstRun: Boolean, onDone: () -> Unit) {
             modifier = Modifier.fillMaxWidth().height(56.dp),
         ) {
             Text(
-                birth?.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG))
+                birth?.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG).withLocale(LocalConfiguration.current.locales[0]))
                     ?: stringResource(R.string.onb_pick),
                 fontSize = 17.sp,
             )
@@ -185,6 +196,38 @@ fun SetupScreen(state: AppState, isFirstRun: Boolean, onDone: () -> Unit) {
             },
         ) {
             DatePicker(pickerState)
+        }
+    }
+}
+
+@Composable
+private fun LanguagePicker() {
+    val activity = LocalActivity.current ?: return
+    var current by remember { mutableStateOf(Locales.current(activity)) }
+    Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.fillMaxWidth()) {
+        Locales.supported.forEach { tag ->
+            val selected = tag == current
+            Text(
+                when (tag) {
+                    Locales.SYSTEM -> stringResource(R.string.lang_system)
+                    "ru" -> "Русский"
+                    else -> "English"
+                },
+                color = if (selected) Ink else Bone,
+                fontSize = 14.sp,
+                fontWeight = if (selected) FontWeight.Bold else FontWeight.Normal,
+                textAlign = TextAlign.Center,
+                maxLines = 1,
+                modifier = Modifier
+                    .weight(1f)
+                    .clip(RoundedCornerShape(12.dp))
+                    .background(if (selected) Ember else Coal)
+                    .clickable {
+                        current = tag
+                        Locales.set(activity, tag)
+                    }
+                    .padding(vertical = 12.dp),
+            )
         }
     }
 }

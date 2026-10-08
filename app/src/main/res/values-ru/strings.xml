@@ -15,6 +15,7 @@
         <item quantity="other">Уровень оптимизма: %d года</item>
     </plurals>
     <string name="onb_nudges">Каждый день напоминать, что ты жив</string>
+    <string name="lang_system">Системный</string>
     <string name="onb_go">Принять это</string>
     <string name="onb_save">Сохранить</string>
 
