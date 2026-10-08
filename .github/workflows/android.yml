@@ -39,6 +39,10 @@ jobs:
           echo "$KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/anyway.jks"
           echo "ANYWAY_KEYSTORE=$RUNNER_TEMP/anyway.jks" >> "$GITHUB_ENV"
 
+      - name: Require release key for tags
+        if: startsWith(github.ref, 'refs/tags/v') && env.ANYWAY_KEYSTORE == ''
+        run: echo "::error::Release keystore secrets are missing" && exit 1
+
       - name: Build
         env:
           ANYWAY_KEYSTORE_PASSWORD: ${{ secrets.ANYWAY_KEYSTORE_PASSWORD }}

@@ -85,15 +85,6 @@ Anyway показывает это число и помогает не трат�
 git tag v0.2.0 && git push origin v0.2.0
 ```
 
-Релизы подписываются debug-ключом, пока в репозитории не заданы секреты:
-
-| Секрет | Значение |
-| --- | --- |
-| `ANYWAY_KEYSTORE_BASE64` | `base64 -w0 release.jks` |
-| `ANYWAY_KEYSTORE_PASSWORD` | пароль keystore |
-| `ANYWAY_KEY_ALIAS` | alias ключа |
-| `ANYWAY_KEY_PASSWORD` | пароль ключа |
-
 ## Как устроено
 
 - **Kotlin + Jetpack Compose**, Material 3, одна activity, ноль сторонних зависимостей

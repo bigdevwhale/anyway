@@ -93,15 +93,6 @@ Requirements: JDK 17+ and the Android SDK (API 36).
 git tag v0.2.0 && git push origin v0.2.0
 ```
 
-Releases are signed with the debug key unless these repository secrets are set:
-
-| Secret | Value |
-| --- | --- |
-| `ANYWAY_KEYSTORE_BASE64` | `base64 -w0 release.jks` |
-| `ANYWAY_KEYSTORE_PASSWORD` | keystore password |
-| `ANYWAY_KEY_ALIAS` | key alias |
-| `ANYWAY_KEY_PASSWORD` | key password |
-
 ## Under the hood
 
 - **Kotlin + Jetpack Compose**, Material 3, single activity, zero third-party dependencies
