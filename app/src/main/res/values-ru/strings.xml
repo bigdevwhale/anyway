@@ -23,9 +23,9 @@
     <!-- The count is shown separately, above the word. -->
     <plurals name="now_suffix" tools:ignore="ImpliedQuantity">
         <item quantity="one">суббота.</item>
-        <item quantity="few">субботы.</item>
+        <item quantity="few">суббот.</item>
         <item quantity="many">суббот.</item>
-        <item quantity="other">субботы.</item>
+        <item quantity="other">суббот.</item>
     </plurals>
     <string name="now_bonus">Ты на бонусном времени. Каждый день — подарок без чека.</string>
     <string name="now_lived">Пройдено %1$d%% пути</string>
