@@ -14,7 +14,7 @@ built on the old Stoic idea of *memento mori*, minus the skulls.
 ![Min SDK](https://img.shields.io/badge/Android-8.0%2B-0E0D0C)
 ![Kotlin](https://img.shields.io/badge/Kotlin-Jetpack%20Compose-0E0D0C)
 
-**English** · [Русский](README.ru.md)
+**English** · [Русский](README.ru.md) · [Website](https://bigdevwhale.github.io/stillcraft/apps/anyway/)
 
 <br />
 

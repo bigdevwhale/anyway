@@ -14,7 +14,7 @@
 ![Min SDK](https://img.shields.io/badge/Android-8.0%2B-0E0D0C)
 ![Kotlin](https://img.shields.io/badge/Kotlin-Jetpack%20Compose-0E0D0C)
 
-[English](README.md) · **Русский**
+[English](README.md) · **Русский** · [Сайт](https://bigdevwhale.github.io/stillcraft/apps/anyway/)
 
 <br />
 
