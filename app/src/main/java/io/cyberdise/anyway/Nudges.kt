@@ -38,7 +38,8 @@ object Nudges {
         val at = store.nextNudgeAt.takeIf { it > now.toInstant().toEpochMilli() }
             ?: nextMoment(now, alreadyShownToday = store.lastNudge == now.toLocalDate())
         store.nextNudgeAt = at
-        alarms.set(AlarmManager.RTC_WAKEUP, at, pending)
+        // Plain set() is deferred indefinitely in Doze; this one still fires while the phone is idle.
+        alarms.setAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, at, pending)
     }
 
     private fun nextMoment(now: ZonedDateTime, alreadyShownToday: Boolean): Long {
@@ -107,6 +108,16 @@ class NudgeReceiver : BroadcastReceiver() {
 
 class BootReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
-        if (intent.action == Intent.ACTION_BOOT_COMPLETED) Nudges.schedule(context)
+        // Alarms are wiped on reboot and on app update; time changes shift the planned moment.
+        if (intent.action in RESCHEDULE_ACTIONS) Nudges.schedule(context)
+    }
+
+    private companion object {
+        val RESCHEDULE_ACTIONS = setOf(
+            Intent.ACTION_BOOT_COMPLETED,
+            Intent.ACTION_MY_PACKAGE_REPLACED,
+            Intent.ACTION_TIME_CHANGED,
+            Intent.ACTION_TIMEZONE_CHANGED,
+        )
     }
 }
